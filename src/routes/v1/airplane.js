@@ -1,9 +1,10 @@
 const express = require('express');
+const { AirplaneController } = require('../../controllers');
 
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-    res.status(200).json({"data":"Success"});
-})
+
+
+router.post('/',AirplaneController.createAirplane)
 
 module.exports = router;
